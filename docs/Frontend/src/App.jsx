@@ -11,7 +11,7 @@ import Profile from "./Auth/Profile";
 
 const App = () => {
   return (
-    <Router base="/Funtoon">
+    <Router basename="/Funtoon_WORLD">
       <Navbar />
       <Routes>
         <Route path="/" element={<HomeLayout />} />

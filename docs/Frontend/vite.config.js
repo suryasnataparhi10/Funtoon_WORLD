@@ -2,6 +2,6 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
-  base: '/Funtoon/', // ⚠️ Important for GitHub Pages
+  base: '/Funtoon_WORLD/docs/',
   plugins: [react()],
 })

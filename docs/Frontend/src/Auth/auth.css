@@ -1,0 +1,239 @@
+.login-container {
+  background-color: #f7f9fc;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-layout-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-box {
+  display: flex;
+  max-width: 1000px;
+  width: 100%;
+  height: 500px;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.login-left {
+  background-color: #3C467B;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  padding: 2.5rem 1.5rem;
+}
+
+.login-left h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.login-left p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.login-left img {
+  max-height: 230px;
+  margin-top: 20px;
+}
+
+.bg-white {
+  background-color: #fff !important;
+}
+
+.form-label {
+  font-weight: 500;
+  color: #333;
+}
+
+.input-group .form-control {
+  border-right: 0;
+  box-shadow: none !important;
+}
+
+.input-group-text {
+  border-left: 0;
+  color: #6c757d;
+  background: #fff;
+}
+
+.input-group:focus-within .form-control,
+.input-group:focus-within .input-group-text {
+  border-color: #3C467B;
+}
+
+.btn-primary {
+  background-color: #3C467B !important;
+  border: none !important;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #2f3763 !important;
+  box-shadow: 0 4px 10px rgba(60, 70, 123, 0.3);
+  transform: translateY(-2px);
+}
+
+.btn-primary:active {
+  transform: scale(0.97);
+  box-shadow: 0 2px 6px rgba(60, 70, 123, 0.2);
+}
+
+.btn-link {
+  color: #3C467B !important;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.btn-link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0%;
+  height: 2px;
+  background-color: #3C467B;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.btn-link:hover {
+  color: #2f3763 !important;
+  transform: scale(1.05);
+}
+
+.btn-link:hover::after {
+  width: 80%;
+}
+
+a {
+  text-decoration: none;
+}
+
+a.text-primary {
+  color: #3C467B !important;
+}
+
+a.text-primary:hover {
+  text-decoration: underline;
+}
+
+.small {
+  font-size: 0.8rem;
+  color: #6c757d;
+}
+
+.auth-nav-btn {
+  background: none;
+  border: none;
+  outline: none;
+  text-align: center;
+  color: #6c757d;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.auth-nav-btn.active {
+  color: #3C467B;
+  position: relative;
+}
+
+.auth-nav-btn.active::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 70px;
+  width: 4px;
+  background-color: #3C467B;
+  border-radius: 2px;
+}
+
+.auth-nav-btn:hover {
+  color: #3C467B;
+  transform: scale(1.05);
+}
+
+
+.auth-nav-btn:hover {
+  animation: pulse 0.8s ease-in-out;
+}
+
+@keyframes pulse {
+  0% { text-shadow: 0 0 0 rgba(60, 70, 123, 0); }
+  50% { text-shadow: 0 0 12px rgba(60, 70, 123, 0.8); transform: scale(1.05); }
+  100% { text-shadow: 0 0 0 rgba(60, 70, 123, 0); transform: scale(1); }
+}
+
+.nav-link {
+  position: relative;
+  transition: color 0.3s;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background-color: #ff6b35;
+  transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+.modal-backdrop-custom {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(6px); /* ✨ soft blur background */
+  background: rgba(0, 0, 0, 0.4); /* dim overlay */
+  z-index: 1050;
+}
+
+.modal-dialog-custom {
+  position: relative;
+  background: transparent;
+  border-radius: 1rem;
+  max-width: 900px;
+  width: 90%;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .login-box {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .login-left {
+    padding: 2rem 1rem;
+  }
+
+  .bg-white {
+    padding: 2rem 1rem !important;
+  }
+
+  .auth-nav-btn.active::before {
+    display: none;
+  }
+}
